@@ -1,0 +1,226 @@
+#include <Windows.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int satir;
+	int sutun;
+
+	do { //Satýr numarasý sorma
+
+		cout << "Satir..: ";
+		cin >> satir;
+
+		if (!(satir >= 5 && satir <= 15))//5 ile 15 arasýnda olduðunu sorgulamak için
+		{
+			cout << "Satir Numarasi Hatali... Tekrar Deneyiniz..." << endl;
+		}
+	} while (!(satir >= 5 && satir <= 15)); //5 ile 15 arasýnda olduðunu sorgulamak için
+
+	do { // Sutun numarasý sorma
+		cout << "Sutun..:";
+		cin >> sutun;
+
+		if (!(sutun >= 5 && sutun <= 40))//5 ile 40 arasýnda olduðunu sorgulamak için
+		{
+			cout << "Sutun Numarasi Hatali... Tekrar Deneyiniz..." << endl;
+		}
+
+	} while (!(sutun >= 5 && sutun <= 40)); //5 ile 40 arasýnda olduðunu sorgulamak için
+
+	do { //Sutunun satýrýn 2 katý oldugunu sorma
+
+		if (!(sutun == (2 * satir)))
+		{
+			cout << "Sutun sayisi satir sayisinin iki kati olmali... Tekrar Deneyin..." << endl;
+			cin >> sutun;
+		}
+
+	} while (!(sutun == (2 * satir))); // sutunun satýr sayýsýnýn 2 katý olduðunu kontrol eder
+
+	for (int i = 0; i < (sutun); i++) //en ust satýrdaki yýldýzlar
+	{
+
+		cout << "*";
+		Sleep(25);
+	}
+	cout << endl;
+
+	for (int j = sutun; j > 4; j -= 2) //butun donguleri denetleyen for
+	{
+
+		for (int l = 0; l < 1; l++) //satýrdaki ilk yýldýz
+		{
+			cout << "*";
+			Sleep(25);
+		}
+
+		for (int k = 0; k < (j / 2) - 3; k++) // yýldýzýn yanýndanki ilk boþluk
+		{
+			cout << " ";
+		}
+
+		cout << "*";// ortadaki boþukla ilk boþluk arasýndaki yýldýz
+
+		for (int c = 0; c < sutun - j + 2; c++)//orta bosluk
+		{
+			cout << " ";
+		}
+
+		cout << "*"; // ortadaki boþlukla 2. boþluk arasýndaki yýldýz
+
+		for (int k = 0; k < (j / 2) - 3; k++) //sað taraftaki boþluk
+		{
+			cout << " ";
+		}
+
+
+		for (int g = 0; g < 1; g++) //satýrýn sonundaki yýldýz
+		{
+			cout << "*";
+			Sleep(25);
+		}
+
+		cout << endl;
+	}
+
+	for (int r = 0; r < (sutun); r++)// ust sekilde en alt satýr
+	{
+		cout << "*";
+		Sleep(25);
+	}
+	cout << endl;
+
+	cout << endl;
+
+	for (int r = 0; r < (sutun); r++)// alt sekilde en ust satýr//////////////////////
+	{
+		cout << "*";
+		Sleep(25);
+	}
+
+	cout << endl;
+
+	for (int j = 4; sutun > j; j += 2) // butun donguleri denetleyen for 
+	{
+
+		for (int l = 0; l < 1; l++) //satýrdaki ilk yýldýz
+		{
+			cout << "*";
+			Sleep(25);
+		}
+
+		for (int k = j; k > (j / 2) +2; k--) // alt þekildeki ilk boþluk
+		{
+			cout << " ";
+		}
+
+		cout << "*"; //ilk boþluk ile orta boþluk arasýndaki yýldýz
+
+		for (int c = sutun; c > j ; c--)//orta bosluk
+		{
+			cout << " ";
+		}
+
+		cout << "*"; //orta boþluk ile 2 boþluk arasýndaki yýldýz
+
+		for (int k = j; k > (j / 2)+2 ; k--) // alt þekildeki 2. boþluk
+		{
+			cout << " ";
+		}
+
+		for (int g = 0; g < 1; g++) //satýrdaki son yýldýz
+		{
+			cout << "*";
+			Sleep(25);
+		}
+
+		cout << endl;
+
+	}
+
+	for (int r = 0; r < (sutun); r++)// ust sekilde en alt satýr
+	{
+
+		cout << "*";
+		Sleep(25);
+	}
+	cout << endl;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
