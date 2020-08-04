@@ -1,0 +1,226 @@
+#include <Windows.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int satir;
+	int sutun;
+
+	do { //Satır numarası sorma
+
+		cout << "Satir..: ";
+		cin >> satir;
+
+		if (!(satir >= 5 && satir <= 15))//5 ile 15 arasında olduğunu sorgulamak için
+		{
+			cout << "Satir Numarasi Hatali... Tekrar Deneyiniz..." << endl;
+		}
+	} while (!(satir >= 5 && satir <= 15)); //5 ile 15 arasında olduğunu sorgulamak için
+
+	do { // Sutun numarası sorma
+		cout << "Sutun..:";
+		cin >> sutun;
+
+		if (!(sutun >= 5 && sutun <= 40))//5 ile 40 arasında olduğunu sorgulamak için
+		{
+			cout << "Sutun Numarasi Hatali... Tekrar Deneyiniz..." << endl;
+		}
+
+	} while (!(sutun >= 5 && sutun <= 40)); //5 ile 40 arasında olduğunu sorgulamak için
+
+	do { //Sutunun satırın 2 katı oldugunu sorma
+
+		if (!(sutun == (2 * satir)))
+		{
+			cout << "Sutun sayisi satir sayisinin iki kati olmali... Tekrar Deneyin..." << endl;
+			cin >> sutun;
+		}
+
+	} while (!(sutun == (2 * satir))); // sutunun satır sayısının 2 katı olduğunu kontrol eder
+
+	for (int i = 0; i < (sutun); i++) //en ust satırdaki yıldızlar
+	{
+
+		cout << "*";
+		Sleep(25);
+	}
+	cout << endl;
+
+	for (int j = sutun; j > 4; j -= 2) //butun donguleri denetleyen for
+	{
+
+		for (int l = 0; l < 1; l++) //satırdaki ilk yıldız
+		{
+			cout << "*";
+			Sleep(25);
+		}
+
+		for (int k = 0; k < (j / 2) - 3; k++) // yıldızın yanındanki ilk boşluk
+		{
+			cout << " ";
+		}
+
+		cout << "*";// ortadaki boşukla ilk boşluk arasındaki yıldız
+
+		for (int c = 0; c < sutun - j + 2; c++)//orta bosluk
+		{
+			cout << " ";
+		}
+
+		cout << "*"; // ortadaki boşlukla 2. boşluk arasındaki yıldız
+
+		for (int k = 0; k < (j / 2) - 3; k++) //sağ taraftaki boşluk
+		{
+			cout << " ";
+		}
+
+
+		for (int g = 0; g < 1; g++) //satırın sonundaki yıldız
+		{
+			cout << "*";
+			Sleep(25);
+		}
+
+		cout << endl;
+	}
+
+	for (int r = 0; r < (sutun); r++)// ust sekilde en alt satır
+	{
+		cout << "*";
+		Sleep(25);
+	}
+	cout << endl;
+
+	cout << endl;
+
+	for (int r = 0; r < (sutun); r++)// alt sekilde en ust satır//////////////////////
+	{
+		cout << "*";
+		Sleep(25);
+	}
+
+	cout << endl;
+
+	for (int j = 4; sutun > j; j += 2) // butun donguleri denetleyen for 
+	{
+
+		for (int l = 0; l < 1; l++) //satırdaki ilk yıldız
+		{
+			cout << "*";
+			Sleep(25);
+		}
+
+		for (int k = j; k > (j / 2) +2; k--) // alt şekildeki ilk boşluk
+		{
+			cout << " ";
+		}
+
+		cout << "*"; //ilk boşluk ile orta boşluk arasındaki yıldız
+
+		for (int c = sutun; c > j ; c--)//orta bosluk
+		{
+			cout << " ";
+		}
+
+		cout << "*"; //orta boşluk ile 2 boşluk arasındaki yıldız
+
+		for (int k = j; k > (j / 2)+2 ; k--) // alt şekildeki 2. boşluk
+		{
+			cout << " ";
+		}
+
+		for (int g = 0; g < 1; g++) //satırdaki son yıldız
+		{
+			cout << "*";
+			Sleep(25);
+		}
+
+		cout << endl;
+
+	}
+
+	for (int r = 0; r < (sutun); r++)// ust sekilde en alt satır
+	{
+
+		cout << "*";
+		Sleep(25);
+	}
+	cout << endl;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
